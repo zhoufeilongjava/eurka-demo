@@ -1,0 +1,28 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+server:
+  port: 8762
+spring:
+  application:
+    name: service-hi
+
+management:
+  endpoint:
+    pause:
+      enabled: true
+    restart:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - info
+          - health
+          - pause
+
+info:
+  contact:
+    email: xiaotanyu13@163.com
+    phone: 15068823267

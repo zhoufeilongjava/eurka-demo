@@ -1,0 +1,17 @@
+server:
+  port: 8001
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 15000
+    use-read-only-response-cache: false
+spring:
+  application:
+    name: eureka-server
